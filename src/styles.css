@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+
+body {
+    background:#404040;
+    font-family: "Times New Roman", Georgia, Serif;
+    font-size: 140%;
+}
+
+div {
+    text-align: justify;
+    letter-spacing: 1px;
+    padding: 20px;
+}
+.container{
+  width: 100%;
+  margin: 7 auto;
+}

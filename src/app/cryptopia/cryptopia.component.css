@@ -9,20 +9,15 @@ th, td {
     color: white;
 }
 
-h1{
+
+
+#cryptopiahead {
     text-align: center;
     padding: 8px;
     color: white;
 }
 
-
-#bittrexhead {
-    text-align: center;
-    padding: 8px;
-    color: white;
-}
-
-#bittrexexchange{
+#cryptopiaexchange{
     text-align: left;
     padding: 8px;
     color: white;
@@ -48,3 +43,4 @@ h1{
 input, select, textarea{
     color: blue;
 }
+

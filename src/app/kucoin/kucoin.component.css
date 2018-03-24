@@ -9,20 +9,15 @@ th, td {
     color: white;
 }
 
-h1{
+
+
+#kucoin {
     text-align: center;
     padding: 8px;
     color: white;
 }
 
-
-#bittrexhead {
-    text-align: center;
-    padding: 8px;
-    color: white;
-}
-
-#bittrexexchange{
+#kucoin{
     text-align: left;
     padding: 8px;
     color: white;

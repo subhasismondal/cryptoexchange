@@ -1,0 +1,25 @@
+<div id="search">
+  Search: <input [(ngModel)]="query">
+ </div>
+<div>
+<table id="kucoin">
+  <tr>
+    <th>Market Name</th>
+    <th>Price</th>
+    <th>24Hr High</th>
+    <th>24Hr Low</th>
+    <th>Bid</th>
+    <th>Ask</th>
+    <th>24Hrs Change</th>
+ </tr>
+   <tr *ngFor="let kucoindata of kucoinarrays.data | search:'symbol':query;">
+    <td>{{kucoindata.symbol}} </td>
+    <td>{{kucoindata.lastDealPrice}}</td>
+    <td>{{kucoindata.high}}</td>
+    <td>{{kucoindata.low}}</td>
+    <td>{{kucoindata.buy}}</td>
+    <td>{{kucoindata.sell}}</td>
+    <td [ngStyle]="{'color':calculateChange(kucoindata.change,kucoindata.lastDealPrice) > 0 ? '#66ff66' : '#ff6666' }">{{calculateChange(kucoindata.change,kucoindata.lastDealPrice) | number : '1.2-3'}}%</td>
+  </tr>
+</table>
+</div>

@@ -1,0 +1,25 @@
+<div id="search">
+  Search: <input [(ngModel)]="query">
+ </div>
+<div>
+<table id="hitbtc">
+  <tr>
+    <th>Market Name</th>
+    <th>Price</th>
+    <th>24Hr High</th>
+    <th>24Hr Low</th>
+    <th>Bid</th>
+    <th>Ask</th>
+    <th>24Hrs Change</th>
+  </tr>
+   <tr *ngFor="let hitbtcdata of hitbtcdatas | search:'symbol':query;">
+    <td>{{hitbtcdata.symbol}}</td>
+    <td>{{hitbtcdata.last}} </td>
+    <td>{{hitbtcdata.high}} </td>
+    <td>{{hitbtcdata.low}}</td>
+    <td>{{hitbtcdata.bid}} </td>
+    <td>{{hitbtcdata.ask}}</td>
+    <td [ngStyle]="{'color':calculateChange(hitbtcdata.last,hitbtcdata.open) > 0 ? '#66ff66' : '#ff6666' }">{{calculateChange(hitbtcdata.last,hitbtcdata.open) | number : '1.2-3'}}%</td>
+  </tr>
+</table>
+</div>
